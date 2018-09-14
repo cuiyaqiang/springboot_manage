@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/commonsPlus/commonsPlus.iml" filepath="$PROJECT_DIR$/commonsPlus/commonsPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/generator/generator.iml" filepath="$PROJECT_DIR$/generator/generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managent/managent.iml" filepath="$PROJECT_DIR$/managent/managent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisPlus/mybatisPlus.iml" filepath="$PROJECT_DIR$/mybatisPlus/mybatisPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_manage.iml" filepath="$PROJECT_DIR$/springboot_manage.iml" />
+    </modules>
+  </component>
+</project>

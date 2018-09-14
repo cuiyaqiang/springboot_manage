@@ -1,0 +1,33 @@
+为什么会出现工作队列
+    simple队列 是一一对应的，而且我们实际开发，生产者发送消息是毫不费力的，而消费者一般是要跟业务相结合的，
+消费者接收到消息之后就需要处理，可能需要花费时间，这时候队列就会积压很多消息
+
+*轮询分发：不管哪个消费者谁忙谁清闲，都不会多发一个消息
+*公平分发：必须关闭自动应答,手动发送回执，能者多劳  true自动回执false手动回执
+
+*消息应答
+boolean autoAck=true;一旦rabbitmq将消息发送给消费者，就会从内存中删除，容易造成消息丢失
+boolean autoAck=false;如果有一个消费者挂掉，就会交付给其它消费者
+*消息持久化
+boolean durable=false; 不可以把程序中声明队列的第二个参数false直接改成true，，rabbitmq不允许重新定义（不同参数）一个已存在的队列
+
+*订阅模式
+生产者--》交换机--》队列--》消费者    一个生产者，多个消费者，每个消费者都有自己的队列，每个队列都要绑定的交换机
+交换机没有存储的能力，rabbitmq里面只有队列有存储能力
+
+*主题模式
+
+*消息确认机制
+    事务机制：txSelect   txCommit    txRollback
+    txSelect用于将当前channel设置成transation模式
+    txCommit用于提交事务
+    txRollback用于事务回滚
+    弊端：降低吞吐量
+    异步confirm模式：
+    好处：异步处理
+    deliveryTag:当前channel发出的消息序号
+    myltiple:信息是否是多条
+    confirmSet:未确认的消息序号集合，最好采用有序集合SortedSet存储结构
+
+
+

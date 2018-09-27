@@ -2,6 +2,7 @@ package com.guye.sun;
 
 import static org.junit.Assert.assertTrue;
 
+import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 
 import java.text.ParseException;
@@ -58,6 +59,8 @@ public class AppTest {
         Date date = null;
         try {
             date = sdf.parse(str1);
+            Map<String,String> map = (Map<String, String>) JSON.parse(str1);
+            System.out.println(map.size());
         } catch (ParseException e1) {
             e1.printStackTrace();
         }
@@ -83,6 +86,37 @@ public class AppTest {
         System.out.println("=========list的长度=="+list.size());
         list.clear();
         System.out.println("=========list的长度=="+list.size());
+    }
+
+    @Test
+    public void testList(){
+        /*String[] a = {"aaa","bbb","ccc"};
+        List<String> b = Arrays.asList(a);
+        System.out.println(b.size());*/
+        /*Long a = -128L;
+        Long b = -128L;
+        String c = "10320";
+        String d = "10320";
+        if (a != b){
+            System.out.println("11111");
+        }
+        System.out.println(a != b || !c.equals(d));
+        System.out.println(!c.equals(d));*/
+
+        /*StringBuilder a = new StringBuilder("{\"aaa\":\"111\",\"bbb\":\"222\"}");
+
+        int b = a.indexOf(",");
+        String c = "aaa";
+        a.replace(b,b+1,",\"ccc\":\""+c+"333\",");
+        System.out.println(a);*/
+
+        List<Integer> list = new ArrayList<>();
+        int a = 2;
+        list.add(a);
+        System.out.println(list.get(0));
+        a = 3;
+        System.out.println(list.get(0));
+
     }
 }
 

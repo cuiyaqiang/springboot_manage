@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * RabbitMQ配置
  */
-@Configuration
+//@Configuration
 public class ManagerRabbitConfig {
 
     private static final Logger log = LoggerFactory.getLogger(ManagerRabbitConfig.class);

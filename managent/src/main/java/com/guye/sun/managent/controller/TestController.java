@@ -16,11 +16,11 @@ import javax.servlet.http.HttpSession;
 @RestController
 public class TestController {
 
-    @Reference
+    /*@Reference
     private TestProvider testProvider;
 
     @GetMapping(value = "/testDubbo")
     public ManagerDto testDubbo() {
         return testProvider.selectManagerByAccount("admin");
-    }
+    }*/
 }

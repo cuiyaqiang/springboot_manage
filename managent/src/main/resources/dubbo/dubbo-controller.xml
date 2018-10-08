@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:component-scan base-package="com.guye.sun.managent"/>-->
+
+    <!-- 消费方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="test-controller" />
+
+    <!-- 注册中心暴露服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
+
+    <!--关闭服务消费方所有服务的启动检查。dubbo缺省会在启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止Spring初始化完成。-->
+    <dubbo:consumer check="false" />
+
+    <!--扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类-->
+    <dubbo:annotation package="com.guye.sun.managent.controller"/>
+
+    <!-- 启用spring mvc注解 -->
+    <!--<context:annotation-config/>-->
+
+</beans>

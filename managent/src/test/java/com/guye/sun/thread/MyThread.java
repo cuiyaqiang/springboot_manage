@@ -1,4 +1,4 @@
-package com.guye.sun;
+package com.guye.sun.thread;
 
 public class MyThread extends Thread {
 

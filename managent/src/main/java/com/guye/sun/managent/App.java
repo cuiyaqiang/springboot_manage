@@ -7,6 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -20,6 +21,7 @@ import java.util.*;
 @EnableSwagger2
 @ServletComponentScan   /*自动扫描带有过滤器注解的包*/
 @SpringBootApplication
+@ImportResource("classpath:dubbo/dubbo-controller.xml") //加载xml配置文件
 @ComponentScan("com.guye.sun.managent")
 public class App extends SpringBootServletInitializer {
 

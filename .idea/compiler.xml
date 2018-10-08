@@ -48,6 +48,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="commonsPlus" target="1.8" />
+      <module name="dubbo_provider" target="1.8" />
       <module name="generator" target="1.8" />
       <module name="managent" target="1.8" />
       <module name="mybatisPlus" target="1.8" />

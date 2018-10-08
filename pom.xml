@@ -13,6 +13,7 @@
     <module>managent</module>
     <module>mybatisPlus</module>
     <module>commonsPlus</module>
+    <module>dubbo_provider</module>
   </modules>
   <packaging>pom</packaging>
 

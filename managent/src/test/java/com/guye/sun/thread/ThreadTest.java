@@ -1,4 +1,4 @@
-package com.guye.sun;
+package com.guye.sun.thread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

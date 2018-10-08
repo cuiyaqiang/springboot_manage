@@ -70,7 +70,7 @@ public class JsonMapper extends ObjectMapper {
 //			this.registerModule(new SimpleModule().addSerializer(Date.class, new JsonSerializer<Date>(){
 //				@Override
 //				public void serialize(Date value, JsonGenerator jgen,
-//						SerializerProvider provider) throws IOException, JsonProcessingException {
+//						SerializerProvider dubbo) throws IOException, JsonProcessingException {
 //					if (value != null){
 //						jgen.writeString(DateUtils.formatDate(value, dataFormat));
 //					}
@@ -81,7 +81,7 @@ public class JsonMapper extends ObjectMapper {
 //		this.registerModule(new SimpleModule().addSerializer(String.class, new JsonSerializer<String>(){
 //			@Override
 //			public void serialize(String value, JsonGenerator jgen,
-//					SerializerProvider provider) throws IOException,
+//					SerializerProvider dubbo) throws IOException,
 //					JsonProcessingException {
 //				if (value != null){
 //					jgen.writeString(StringEscapeUtils.unescapeHtml4(value));

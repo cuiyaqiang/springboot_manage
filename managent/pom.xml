@@ -12,6 +12,7 @@
     <artifactId>managent</artifactId>
 
     <name>managent</name>
+    <packaging>war</packaging>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -59,6 +60,11 @@
         <dependency>
             <groupId>com.guye.sun</groupId>
             <artifactId>mybatisPlus</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.guye.sun</groupId>
+            <artifactId>dubbo_provider</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -154,11 +160,33 @@
         </dependency>
 
         <!-- Spring Boot Dubbo 依赖 -->
-        <dependency>
-            <groupId>io.dubbo.springboot</groupId>
-            <artifactId>spring-boot-starter-dubbo</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+        <!-- Spring Boot Dubbo 依赖 -->
+        <!--<dependency>-->
+            <!--<groupId>com.alibaba</groupId>-->
+            <!--<artifactId>dubbo</artifactId>-->
+            <!--<version>2.5.3</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>spring</artifactId>-->
+                    <!--<groupId>org.springframework</groupId>-->
+                <!--</exclusion>-->
+                <!--&lt;!&ndash;<exclusion>-->
+                    <!--<artifactId>netty</artifactId>-->
+                    <!--<groupId>org.jboss.netty</groupId>-->
+                <!--</exclusion>&ndash;&gt;-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.101tec</groupId>-->
+            <!--<artifactId>zkclient</artifactId>-->
+            <!--<version>0.10</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.slf4j</groupId>-->
+                    <!--<artifactId>slf4j-log4j12</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
         <!-- Http请求 -->
         <dependency>
@@ -222,7 +250,7 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <configuration>
-                        <mainClass>com.guye.sun.managent.App</mainClass>
+                        <mainClass>com.guye.sun.dubbo.ProviderApp</mainClass>
                     </configuration>
                 </plugin>
             </plugins>

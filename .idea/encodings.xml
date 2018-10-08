@@ -3,6 +3,7 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/commonsPlus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dubbo_provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/managent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatisPlus" charset="UTF-8" />

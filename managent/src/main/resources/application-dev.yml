@@ -3,9 +3,9 @@ server:
 
 spring:
   application:
-    name: dubbo
+    name: managent
   swagger:
-    base-package: com.guye.sun.dubbontroller
+    base-package: com.guye.sun.managent.controller
   thymeleaf:
     cache: false
 #    enabled: false

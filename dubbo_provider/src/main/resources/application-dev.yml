@@ -19,7 +19,6 @@ mybatis:
   type-aliases-package: com.guye.sun.dubbo
   configuration:
     map-underscore-to-camel-case: true
-
     cache-enabled: true
 
 mapper:

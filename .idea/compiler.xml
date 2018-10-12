@@ -17,19 +17,12 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for managent" enabled="true">
+      <profile default="false" name="Annotation profile for generator" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="managent" />
-      </profile>
-      <profile default="false" name="Annotation profile for mybatisPlus" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="mybatisPlus" />
+        <module name="generator" />
       </profile>
       <profile default="false" name="Annotation profile for commonsPlus" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -38,12 +31,19 @@
         <processorPath useClasspath="true" />
         <module name="commonsPlus" />
       </profile>
-      <profile default="false" name="Annotation profile for generator" enabled="true">
+      <profile default="false" name="Annotation profile for mybatisPlus" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="generator" />
+        <module name="mybatisPlus" />
+      </profile>
+      <profile default="false" name="Annotation profile for managent" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="managent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

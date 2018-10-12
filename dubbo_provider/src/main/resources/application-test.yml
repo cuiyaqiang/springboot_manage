@@ -1,19 +1,9 @@
 server:
-  port: 8081
+  port: 8089
 
 spring:
   application:
     name: dubbo
-  swagger:
-    base-package: com.guye.sun.dubbontroller
-  thymeleaf:
-    cache: false
-#    enabled: false
-    content-type: text/html
-    encoding: UTF-8
-    mode: HTML5
-    prefix: classpath:/templates/
-    suffix: .html
   datasource:
     url: jdbc:mysql://localhost:3306/sys?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
     username: root
@@ -22,37 +12,14 @@ spring:
     hikari:
       max-lifetime: 1765000 #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒以上
       maximum-pool-size:  15 #连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)
-  rabbitmq:
-    host: 127.0.0.1
-    username: guye
-    password: 1234
-    port: 5672
-    virtual-host: /virhost_guye
-    listener:
-      simple:
-        acknowledge-mode: manual
-  redis:
-    database: 0
-    host: 127.0.0.1
-    port: 6379
-    password:
-    pool:
-      max-active: 8
-      max-wait: -1
-      max-idle: 8
-      min-idle: 0
-    timeout: 0
-  restTemplate:
-    maxTotalConnect: 1000   #连接池的最大连接数，0代表不限；如果取0，需要考虑连接泄漏导致系统崩溃的后果
-    maxConnectPerRoute: 200
-    connectTimeout: 5000
-    charset: UTF-8
+
 mybatis:
   mapper-locations:
   - classpath:com/guye/sun/dubbo/dao/*.xml
-  type-aliases-package: com.guye.sun.dubbojo
+  type-aliases-package: com.guye.sun.dubbo
   configuration:
     map-underscore-to-camel-case: true
+    cache-enabled: true
 
 mapper:
   identity: MYSQL

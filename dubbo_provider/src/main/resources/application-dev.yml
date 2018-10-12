@@ -16,7 +16,7 @@ spring:
 mybatis:
   mapper-locations:
   - classpath:com/guye/sun/dubbo/dao/*.xml
-  type-aliases-package: com.guye.sun.dubbo
+  type-aliases-package: com.guye.sun.dubbo.pojo
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: true

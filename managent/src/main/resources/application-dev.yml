@@ -47,15 +47,15 @@ spring:
     maxConnectPerRoute: 200
     connectTimeout: 5000
     charset: UTF-8
-mybatis:
 
+mybatis:
   mapper-locations:
-  - classpath:com/guye/sun/dubbo/dao/*.xml
-  type-aliases-package: com.guye.sun.dubbojo
+  - classpath:com/guye/sun/managent/dao/*.xml
+  type-aliases-package: com.guye.sun.managent.pojo
   configuration:
     map-underscore-to-camel-case: true
-
     cache-enabled: true
+
 mapper:
   identity: MYSQL
   mappers:
